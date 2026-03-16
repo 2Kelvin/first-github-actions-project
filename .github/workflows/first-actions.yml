@@ -1,14 +1,20 @@
 name: My first GitHub Actions
 on: push
 jobs:
-    first_job:
-        runs-on: ubuntu-24.04
-        steps:
-            - name: Hello message in Ubuntu VM
-              run: echo -e "\e[32mHello Github Actions\e[0m"
+  first_job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repo # git clones our repo into the ubuntu vm
+        uses: actions/checkout@v6.0.2
 
-            - name: Print working directory
-              run: pwd
+      - name: Hello message in Ubuntu VM
+        run: echo "Hello Github Actions"
+        
+      - name: Where am i?
+        run: pwd; tree -a -I .git;
 
-            - name: List all root files
-              run: ls -la /
+      - name: List all files in this project
+        run: ls -la
+
+      - name: Read the README.md file
+        run: cat README.md
