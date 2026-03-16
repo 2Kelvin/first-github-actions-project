@@ -3,5 +3,5 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y nodejs npm
 echo -e "\e[32mNodeJS and npm were successfully installed\e[0m"
-node --version
-npm --version
+echo -e "\e[34mNodeJS version:\e[0m $(node --version)"
+echo -e "\e[34mnpm version:\e[0m $(npm --version)"

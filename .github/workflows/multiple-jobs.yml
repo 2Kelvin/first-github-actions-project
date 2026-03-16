@@ -1,4 +1,4 @@
-name: Running multiple jobs in one workflow file
+name: Running multiple jobs
 on: push
 jobs:
   system_info:
