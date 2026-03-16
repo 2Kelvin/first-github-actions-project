@@ -8,15 +8,15 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: Hello message in Ubuntu VM
-        run: echo "Hello Github Actions"
+        run: echo "Hello Github Actions" # how to run a command in ubuntu vm terminal
         
       - name: Where am i?
-        run: |
+        run: | # run multiple commands in the ubuntu vm terminal
           pwd
           tree -a -I .git
 
-      - name: List all files in this project
-        run: ls -la
-
       - name: Read the README.md file
-        run: cat README.md
+        run: cat README.md # display the contents of this repo's readme
+
+      # - name: Use 3rd party library tool in ubuntu to create ascii artwork
+      #   run: cowsay "Hello CI/CD and GitHub Actions" 
