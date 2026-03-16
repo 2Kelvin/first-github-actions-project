@@ -1,8 +1,8 @@
 name: My first GitHub Actions
-on: push
+on: push # run actions on every code commit pushed to github
 jobs:
   first_job:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04 # runner a.k.a the Ubuntu VM this github workflow runs on
     steps:
       - name: Checkout repo # git clones our repo into the ubuntu vm
         uses: actions/checkout@v6.0.2
@@ -17,6 +17,3 @@ jobs:
 
       - name: Read the README.md file
         run: cat README.md # display the contents of this repo's readme
-
-      # - name: Use 3rd party library tool in ubuntu to create ascii artwork
-      #   run: cowsay "Hello CI/CD and GitHub Actions" 
