@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Here is your system's information"
+cat /etc/os-release
+echo "IP Address: $(hostname -I)"

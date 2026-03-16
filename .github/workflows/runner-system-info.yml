@@ -1,0 +1,8 @@
+name: Check runner's system information
+on: push
+jobs:
+  system_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OS fetching script
+        run: ./../../check-os
