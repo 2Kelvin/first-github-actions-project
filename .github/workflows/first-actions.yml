@@ -7,8 +7,8 @@ jobs:
             - name: Hello message in Ubuntu VM
               run: echo "Hello Github Actions"
 
-            - name: List all files in this project
-              run: ls -la
+            - name: Print working directory
+              run: pwd
 
-            - name: Read the README.md file
-              run: cat README.md
+            - name: List all root files
+              run: ls -la /
