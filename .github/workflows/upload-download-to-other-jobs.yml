@@ -15,8 +15,8 @@ jobs:
       - name: Share the test file for other jobs to use
         uses: actions/upload-artifact@v7.0.0 # uploading file for other jobs to use
         with:
-          name: lyrics-testfile
-          path: ./lyrics.txt
+          name: lyrics-testfile # filename for later jobs to use for download
+          path: ./lyrics.txt # path to location of the test file
 
   job2:
     needs: job1
