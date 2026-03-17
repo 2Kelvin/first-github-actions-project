@@ -43,10 +43,10 @@ jobs:
     needs: job2
     runs-on: ubuntu-latest
     steps:
-      - name: Download job1's test file
+      - name: Download job2's updated test file
         uses: actions/download-artifact@v8.0.1 # downloading shared/uploaded file
         with:
-          name: lyrics-testfile
+          name: lyrics-updated-testfile
 
       - name: Check for test file with updated content from job2
         run: |
