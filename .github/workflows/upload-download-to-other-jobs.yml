@@ -34,7 +34,7 @@ jobs:
         run: echo 'Yale umetenda Baba yote ni makuu' >> lyrics.txt
 
       - name: Upload updated test file
-        uses: actions/upload-artifact@v7.0.0 # reuploading updated file for job2 to use
+        uses: actions/upload-artifact@v7.0.0 # reuploading updated file for job3 to use
         with:
           name: lyrics-updated-testfile
           path: ./lyrics.txt
