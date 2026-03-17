@@ -28,7 +28,7 @@ jobs:
           name: lyrics-testfile
 
       - name: Check for job1's test file
-        run: ls -a lyrics.txt
+        run: ls -alh lyrics.txt
 
       - name: Add content to test file
         run: echo 'Yale umetenda Baba yote ni makuu' >> lyrics.txt
@@ -49,7 +49,6 @@ jobs:
           name: lyrics-testfile
 
       - name: Check for test file with updated content from job2
-        run: ls -a lyrics.txt
-
-      - name: Reading downloaded file
-        run: cat lyrics.txt
+        run: |
+          ls -alh lyrics.txt
+          cat lyrics.txt
