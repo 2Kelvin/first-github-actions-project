@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download job1's test file
-        uses: dawidd6/action-download-artifact@v18 # downloading shared/uploaded file
+        uses: actions/download-artifact@v8.0.1 # downloading shared/uploaded file
         with:
           name: lyrics-testfile
 
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download job1's test file
-        uses: dawidd6/action-download-artifact@v18 # downloading shared/uploaded file
+        uses: actions/download-artifact@v8.0.1 # downloading shared/uploaded file
         with:
           name: lyrics-testfile
 
