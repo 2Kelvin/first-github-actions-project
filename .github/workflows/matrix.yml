@@ -8,7 +8,7 @@ jobs:
         docker_images: [hello-world, alpine]
         exclude: # excluding alpine docker image from running on windows
           - docker_images: alpine
-          - os: windows-latest
+            os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check docker details
