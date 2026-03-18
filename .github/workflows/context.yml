@@ -11,5 +11,5 @@ jobs:
 
       - name: Log runner contexts
         env:
-          RUNNER_CONTEXTS: ${{ toJson(github) }}
+          RUNNER_CONTEXTS: ${{ toJson(runner) }}
         run: echo "$RUNNER_CONTEXTS"
