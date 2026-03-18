@@ -4,7 +4,12 @@ jobs:
   accessing_contexts:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetching all contexts
+      - name: Log all contexts
         env:
           ALL_CONTEXTS: ${{ toJson(github) }}
         run: echo "$ALL_CONTEXTS"
+
+      - name: Log runner contexts
+        env:
+          RUNNER_CONTEXTS: ${{ toJson(github) }}
+        run: echo "$RUNNER_CONTEXTS"
