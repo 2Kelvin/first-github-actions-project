@@ -1,18 +1,15 @@
-name: Matrix configuration
+name: Matrix strategy; testing docker on different OS
 on: push
 jobs:
-  ubuntu_config:
-    runs-on: ubuntu-latest
+  docker_os_test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-22.04, windows-latest]
+        docker_images: [hello-world, alpine]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Check docker details
         run: docker info
-      - name: Run docker hello world image
-        run: docker run hello-world
-
-  windows_config:
-    runs-on: windows-latest
-    steps:
-      - name: Check docker details
-        run: docker info
-      - name: Run docker hello world image
-        run: docker run hello-world
+        
+      - name: Run docker on ${{ matrix.os }}
+        run: docker run ${{ matrix.docker_images }}
