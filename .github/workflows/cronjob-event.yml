@@ -2,6 +2,7 @@ name: Cron Job workflow running every 5 minutes
 on:
     schedule:
       - cron: "*/5 * * * *" 
+    workflow_dispatch: # creates a workflow dispatch button in the UI
 jobs:
   cronjob:
     runs-on: ubuntu-latest
