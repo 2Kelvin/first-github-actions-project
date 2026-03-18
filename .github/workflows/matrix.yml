@@ -1,0 +1,26 @@
+name: Matrix configuration
+on: push
+jobs:
+  ubuntu_config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check docker details
+        run: docker info
+      - name: Run docker hello world image
+        run: docker run hello-world
+
+  windows_config:
+    runs-on: windows-latest
+    steps:
+      - name: Check docker details
+        run: docker info
+      - name: Run docker hello world image
+        run: docker run hello-world
+
+  macos_config:
+    runs-on: macos-latest
+    steps:
+      - name: Check docker details
+        run: docker info
+      - name: Run docker hello world image
+        run: docker run hello-world
